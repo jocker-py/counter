@@ -8,7 +8,7 @@ type ControllerPropsType = {
   maxValue: number;
 }
 
-const Controller: FC<ControllerPropsType> = ({minValue, maxValue}) => {
+export const Controller: FC<ControllerPropsType> = ({minValue, maxValue}) => {
   const [value, setValue] = useState(minValue);
   const reset = () => setValue(minValue);
   const increment = () => setValue(value >= maxValue ? maxValue : value + 1);
@@ -29,5 +29,3 @@ const Controller: FC<ControllerPropsType> = ({minValue, maxValue}) => {
     </div>
   )
 };
-
-export default Controller;

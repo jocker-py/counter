@@ -1,5 +1,5 @@
 import React, {} from "react";
-import Controller from "./Controller/Controller";
+import {Controller} from "./Controller/Controller";
 
 
 
