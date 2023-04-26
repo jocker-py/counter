@@ -1,7 +1,7 @@
 import React, {FC, useState} from "react";
 import s from "./Counter.module.css";
-import {Screen} from "./Screen/Screen";
-import {Button} from "./Button/Button";
+import {Button} from "../Button/Button";
+import {Screen} from "../Screen/Screen";
 
 type ControllerPropsType = {
   minValue: number;
