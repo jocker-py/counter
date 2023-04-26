@@ -8,6 +8,9 @@ export const Counter = () => {
     minValue: 0,
     maxValue: 1,
   });
+  function setMinValue(value: number){
+    setSettings({...settings, minValue: value});
+  }
   return (
     <>
       <Controller {...settings}/>
