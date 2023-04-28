@@ -7,9 +7,13 @@ import {ValuesType} from "../Counter";
 type ControllerPropsType = ValuesType;
 export const Controller: FC<ControllerPropsType> = ({minValue, maxValue}) => {
   const [value, setValue] = useState(minValue);
+
+  useEffect(() => setValue(minValue), [minValue]);
+
   const reset = () => setValue(minValue);
   const increment = () => setValue( value + 1);
   const decrement = () => setValue(value - 1);
+
   const isMinError = value <= minValue;
   const isMaxError = value >= maxValue;
   return (
